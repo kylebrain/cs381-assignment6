@@ -1,4 +1,4 @@
 src/main.o: ../src/main.cpp \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h:

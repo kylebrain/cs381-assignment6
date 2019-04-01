@@ -29,9 +29,9 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
  /usr/local/include/OGRE/OgreStringInterface.h \
  /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h \
  /usr/local/include/OGRE/OgreResourceGroupManager.h \
  /usr/local/include/OGRE/OgreSingleton.h \
  /usr/local/include/OGRE/OgreArchive.h \
@@ -89,7 +89,7 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
  /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GfxMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
@@ -128,7 +128,7 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
  /usr/local/include/OGRE/OgreLodStrategyManager.h \
  /usr/local/include/OGRE/OgreLodStrategy.h \
  /usr/local/include/OGRE/OgreWorkQueue.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h
 
 /usr/local/include/OGRE/OgreConfigFile.h:
 
@@ -190,11 +190,11 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h:
 
 /usr/local/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h:
 
 /usr/local/include/OGRE/OgreResourceGroupManager.h:
 
@@ -316,7 +316,7 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
 
 /usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GfxMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -394,4 +394,4 @@ src/Mgrs/GfxMgr.o: ../src/Mgrs/GfxMgr.cpp \
 
 /usr/local/include/OGRE/OgreWorkQueue.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h:

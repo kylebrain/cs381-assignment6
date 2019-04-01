@@ -26,7 +26,7 @@ CPP_DEPS += \
 src/%.o: ../src/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
-	g++ -I"/home/kylebrain/eclipse-workspace/Assignment6/inc" -I"/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs" -I"/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects" -I"/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships" -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	g++ -I/usr/local/include/OGRE -I/usr/local/include/OGRE/Overlay -I/usr/include/ois -I"/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc" -I"/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects" -I"/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs" -I"/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

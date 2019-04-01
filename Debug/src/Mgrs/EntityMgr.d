@@ -1,5 +1,5 @@
 src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -36,9 +36,9 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
  /usr/local/include/OGRE/OgreResource.h \
  /usr/local/include/OGRE/OgreStringInterface.h \
  /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h \
  /usr/local/include/OGRE/OgreIteratorWrappers.h \
  /usr/local/include/OGRE/OgreIteratorWrapper.h \
  /usr/local/include/OGRE/OgreIteratorRange.h \
@@ -115,8 +115,8 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreEntity.h \
@@ -124,18 +124,18 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
  /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Destroyer.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Carrier.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Speedboat.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Frigate.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Alien.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Entity3D.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Banshee.h
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Destroyer.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Carrier.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Speedboat.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Frigate.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Alien.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity3D.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Banshee.h
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
 
@@ -213,11 +213,11 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h:
 
 /usr/local/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h:
 
 /usr/local/include/OGRE/OgreIteratorWrappers.h:
 
@@ -373,9 +373,9 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -391,22 +391,22 @@ src/Mgrs/EntityMgr.o: ../src/Mgrs/EntityMgr.cpp \
 
 /usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Destroyer.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Destroyer.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Carrier.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Carrier.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Speedboat.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Speedboat.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Frigate.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Frigate.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Alien.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Alien.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Entity3D.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity3D.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Ships/Banshee.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Ships/Banshee.h:

@@ -1,6 +1,6 @@
 src/Aspects/AI.o: ../src/Aspects/AI.cpp \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/AI.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/AI.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgrePrerequisites.h \
  /usr/local/include/OGRE/OgrePlatform.h \
@@ -15,7 +15,7 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
  /usr/local/include/OGRE/OgreMemoryNedPooling.h \
  /usr/local/include/OGRE/OgreMath.h \
  /usr/local/include/OGRE/OgreQuaternion.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreNode.h /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/OgreString.h \
@@ -39,9 +39,9 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
  /usr/local/include/OGRE/OgreResource.h \
  /usr/local/include/OGRE/OgreStringInterface.h \
  /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h \
  /usr/local/include/OGRE/OgreIteratorWrappers.h \
  /usr/local/include/OGRE/OgreIteratorWrapper.h \
  /usr/local/include/OGRE/OgreIteratorRange.h \
@@ -80,7 +80,7 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
  /usr/local/include/OGRE/OgreResourceGroupManager.h \
  /usr/local/include/OGRE/OgreArchive.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreSceneQuery.h \
@@ -127,14 +127,14 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
  /usr/local/include/OGRE/OgreFrameListener.h \
  /usr/local/include/OGRE/OgreConfigOptionMap.h \
  /usr/local/include/OGRE/OgreNameGenerator.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h \
  /usr/local/include/OGRE/OgreMath.h
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/AI.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/AI.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -164,7 +164,7 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
 
 /usr/local/include/OGRE/OgreQuaternion.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreSceneNode.h:
 
@@ -214,11 +214,11 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h:
 
 /usr/local/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h:
 
 /usr/local/include/OGRE/OgreIteratorWrappers.h:
 
@@ -296,7 +296,7 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
 
 /usr/local/include/OGRE/OgreArchive.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
 
@@ -390,10 +390,10 @@ src/Aspects/AI.o: ../src/Aspects/AI.cpp \
 
 /usr/local/include/OGRE/OgreNameGenerator.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h:
 
 /usr/local/include/OGRE/OgreMath.h:

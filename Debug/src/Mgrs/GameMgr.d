@@ -21,9 +21,9 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
  /usr/local/include/OGRE/OgreStringInterface.h \
  /usr/local/include/OGRE/OgreCommon.h \
  /usr/local/include/OGRE/Threading/OgreThreadHeaders.h \
- /usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h \
  /usr/local/include/OGRE/Threading/OgreThreadDefines.h \
- /usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h \
+ /usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h \
  /usr/local/include/OGRE/OgreResourceGroupManager.h \
  /usr/local/include/OGRE/OgreSingleton.h \
  /usr/local/include/OGRE/OgreDataStream.h \
@@ -61,9 +61,9 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
  /usr/local/include/OGRE/OgrePatchMesh.h \
  /usr/local/include/OGRE/OgrePatchSurface.h \
  /usr/local/include/OGRE/OgreRenderOperation.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GameMgr.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GfxMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GameMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GfxMgr.h \
  /usr/local/include/OGRE/OgreRoot.h \
  /usr/local/include/OGRE/OgreSceneManagerEnumerator.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
@@ -125,9 +125,9 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
  /usr/local/include/OGRE/OgreLodStrategyManager.h \
  /usr/local/include/OGRE/OgreLodStrategy.h \
  /usr/local/include/OGRE/OgreWorkQueue.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h \
  /usr/local/include/OGRE/OgreSceneManager.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h \
  /usr/local/include/OGRE/OgreVector3.h \
  /usr/local/include/OGRE/OgreSceneNode.h \
  /usr/local/include/OGRE/OgreEntity.h \
@@ -135,8 +135,8 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
  /usr/local/include/OGRE/OgreHardwareCounterBuffer.h \
  /usr/local/include/OGRE/OgreHardwareUniformBuffer.h \
  /usr/local/include/OGRE/OgreRenderToVertexBuffer.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h \
- /home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h \
+ /home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h
 
 /usr/local/include/OGRE/OgreMeshManager.h:
 
@@ -182,11 +182,11 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
 
 /usr/local/include/OGRE/Threading/OgreThreadHeaders.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadHeadersBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadHeadersPoco.h:
 
 /usr/local/include/OGRE/Threading/OgreThreadDefines.h:
 
-/usr/local/include/OGRE/Threading/OgreThreadDefinesBoost.h:
+/usr/local/include/OGRE/Threading/OgreThreadDefinesPoco.h:
 
 /usr/local/include/OGRE/OgreResourceGroupManager.h:
 
@@ -266,11 +266,11 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreRenderOperation.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GameMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GameMgr.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/Mgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/Mgr.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/GfxMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/GfxMgr.h:
 
 /usr/local/include/OGRE/OgreRoot.h:
 
@@ -396,11 +396,11 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreWorkQueue.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Mgrs/EntityMgr.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Mgrs/EntityMgr.h:
 
 /usr/local/include/OGRE/OgreSceneManager.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Entity381.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Entity381.h:
 
 /usr/local/include/OGRE/OgreVector3.h:
 
@@ -416,6 +416,6 @@ src/Mgrs/GameMgr.o: ../src/Mgrs/GameMgr.cpp \
 
 /usr/local/include/OGRE/OgreRenderToVertexBuffer.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Aspects/Aspect.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Aspects/Aspect.h:
 
-/home/kylebrain/eclipse-workspace/Assignment6/inc/Engine.h:
+/home/garrettmoore/Documents/Assignment6/cs381-assignment6/inc/Engine.h:
