@@ -13,6 +13,12 @@ Command::Command(Entity381* ent, COMMAND_TYPE ct) :
 Command::~Command() {
 }
 
+void Command::Goto(Ogre::Vector3 pos) {
+	Ogre::Vector3 distanceVector = pos - entity->position;
+	entity->desiredHeading = Ogre::Math::ATan2(distanceVector.z,
+			distanceVector.x).valueDegrees();
+	entity->desiredSpeed = entity->maxSpeed;
+}
 
 // MoveTo
 MoveTo::MoveTo(Entity381* ent, Ogre::Vector3 location) :
@@ -25,11 +31,11 @@ MoveTo::~MoveTo() {
 void MoveTo::init() {
 }
 void MoveTo::tick(float dt) {
+	Goto(targetLocation);
 }
 bool MoveTo::done() {
-	return true;
+	return targetLocation.distance(entity->position) <= MOVE_DISTANCE_THRESHOLD;
 }
-
 
 // Intercept
 Intercept::Intercept(Entity381* ent, Entity381* target) :
@@ -42,8 +48,19 @@ Intercept::~Intercept() {
 void Intercept::init() {
 }
 void Intercept::tick(float dt) {
+	Ogre::Vector3 relativeVel = targetEntity->velocity - entity->velocity;
+	Ogre::Vector3 distanceVector = targetEntity->position - entity->position;
+
+	if (relativeVel.length() == 0) {
+		Goto(targetEntity->position);
+	} else {
+		float interceptTime = distanceVector.length() / relativeVel.length();
+		Ogre::Vector3 targetPos = targetEntity->position
+				+ targetEntity->velocity * interceptTime;
+		Goto(targetPos);
+	}
 }
 bool Intercept::done() {
-	return true;
+	return targetEntity->position.distance(entity->position) <= MOVE_DISTANCE_THRESHOLD;
 }
 
