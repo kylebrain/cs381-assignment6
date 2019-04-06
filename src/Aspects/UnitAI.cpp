@@ -16,10 +16,18 @@ UnitAI::~UnitAI() {
 
 }
 
+#include <iostream>
+
 void UnitAI::Tick(float dt) {
-	if(!commands.empty()){
+	Command *temp;
+
+	if (!commands.empty()) {
+		temp = commands.front();
 		temp->tick(dt);
-		if(temp->done()){
+		if (temp->done()) {
+			std::cout << "Command finished!" << std::endl;
+			entity->desiredSpeed = 0;
+			delete commands.front();
 			commands.pop_front();
 		}
 	}
@@ -43,21 +51,15 @@ void UnitAI::Tick(float dt) {
  }
  */
 
-void UnitAI::SetCommand(Command * c) {
-
-}
-void UnitAI::AddCommand(Command * c) {
-
-}
-
-void UnitAI::SetCommand(Command *c){
-	if(!commands.empty()){
+void UnitAI::SetCommand(Command *c) {
+	if (!commands.empty()) {
 		commands.clear();
-		commands.push_back(c);
 	}
+	commands.push_back(c);
+
 }
 
-void UnitAI::AddCommand(Command *c){
-		commands.push_back(c);
+void UnitAI::AddCommand(Command *c) {
+	commands.push_back(c);
 }
 

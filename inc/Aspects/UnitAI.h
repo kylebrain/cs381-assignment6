@@ -18,8 +18,6 @@ public:
 	UnitAI(Entity381 * _entity);
 	~UnitAI();
 
-	Command *temp;
-
 	std::list<Command*> commands;
 	void SetCommand(Command * c);
 	void AddCommand(Command * c);

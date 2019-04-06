@@ -258,6 +258,9 @@ void InputMgr::Init() {
 	windowResized(engine->gfxMgr->mWindow);
 	Ogre::WindowEventUtilities::addWindowEventListener(engine->gfxMgr->mWindow,
 			this);
+
+	pl.insert(std::make_pair(std::string("x11_mouse_grab"), std::string("false")));
+	pl.insert(std::make_pair(std::string("x11_keyboard_grab"), std::string("false")));
 }
 void InputMgr::LoadLevel() {
 
