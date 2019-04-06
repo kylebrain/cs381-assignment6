@@ -10,12 +10,16 @@
 
 #include "Aspect.h"
 #include "OgreVector3.h"
+#include "Command.h"
 
 class UnitAI : public Aspect {
 
 public:
 	UnitAI(Entity381 * _entity);
 	~UnitAI();
+
+	void SetCommand(Command * c);
+	void AddCommand(Command * c);
 
 	void Tick(float dt) override;
 //private:

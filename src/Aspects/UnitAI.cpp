@@ -18,22 +18,28 @@ UnitAI::~UnitAI() {
 
 void UnitAI::Tick(float dt) {
 	/*
-	if (entity->followEnt != NULL) {
-		Follow(entity->followEnt);
-	}
-	*/
+	 if (entity->followEnt != NULL) {
+	 Follow(entity->followEnt);
+	 }
+	 */
 }
-
 
 /*
-void UnitAI::MoveTo(Ogre::Vector3 position) {
-	Ogre::Vector3 distanceVector =  position - entity->position;
-	entity->desiredHeading = Ogre::Math::ATan2(distanceVector.z, distanceVector.x).valueDegrees();
-	entity->desiredSpeed = entity->maxSpeed;
-}
+ void UnitAI::MoveTo(Ogre::Vector3 position) {
+ Ogre::Vector3 distanceVector =  position - entity->position;
+ entity->desiredHeading = Ogre::Math::ATan2(distanceVector.z, distanceVector.x).valueDegrees();
+ entity->desiredSpeed = entity->maxSpeed;
+ }
 
-void UnitAI::Follow(Entity381 * followEnt) {
-	MoveTo(followEnt->position);
+ void UnitAI::Follow(Entity381 * followEnt) {
+ MoveTo(followEnt->position);
+ }
+ */
+
+void UnitAI::SetCommand(Command * c) {
+
 }
-*/
+void UnitAI::AddCommand(Command * c) {
+
+}
 

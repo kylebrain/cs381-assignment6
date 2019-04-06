@@ -24,6 +24,7 @@ public:
 	float headingIncreasePerPress;
 	float altitudeIncreasePerPress;
 	float cameraSpeed;
+	float entityClickThreshold;
 
 	Ogre::Plane groundPlane;
 private:
