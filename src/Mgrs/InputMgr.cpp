@@ -161,7 +161,8 @@ bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 		entIndex = GetClickedEntityIndex(arg);
 		if (entIndex >= 0) {
 			// set the selected entity to follow the right clicked entity
-			engine->entityMgr->selectedEntity->followEnt = engine->entityMgr->entities[entIndex];
+				// add a command
+			//engine->entityMgr->selectedEntity->followEnt = engine->entityMgr->entities[entIndex];
 		}
 		break;
 

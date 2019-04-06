@@ -48,9 +48,6 @@ public:
 	float acceleration;
 	float turningRate;
 
-	// ai
-	Entity381 * followEnt;
-
 	// mesh
 	string meshFile;
 
