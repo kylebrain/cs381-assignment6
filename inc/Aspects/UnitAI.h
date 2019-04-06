@@ -5,17 +5,17 @@
  *      Author: kylebrain
  */
 
-#ifndef INC_ASPECTS_AI_H_
-#define INC_ASPECTS_AI_H_
+#ifndef INC_ASPECTS_UNITAI_H_
+#define INC_ASPECTS_UNITAI_H_
 
 #include "Aspect.h"
 #include "OgreVector3.h"
 
-class AI : public Aspect {
+class UnitAI : public Aspect {
 
 public:
-	AI(Entity381 * _entity);
-	~AI();
+	UnitAI(Entity381 * _entity);
+	~UnitAI();
 
 	void Tick(float dt) override;
 private:
@@ -25,4 +25,4 @@ private:
 
 
 
-#endif /* INC_ASPECTS_AI_H_ */
+#endif /* INC_ASPECTS_UNITAI_H_ */

@@ -6,11 +6,11 @@
  */
 //now includes functions for banshee class
 
+#include <UnitAI.h>
 #include "Entity3D.h"
 #include "Physics.h"
 #include "Renderable.h"
 #include "Physics3D.h"
-#include "AI.h"
 
 Entity3D::Entity3D() : Entity381(), altitude(0), desiredAltitude(0), climbRate(0) {
 
@@ -43,7 +43,7 @@ void Banshee::InitAspects() {
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Physics3D(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 
 }
 

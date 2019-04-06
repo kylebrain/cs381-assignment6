@@ -6,10 +6,9 @@
  */
 //now includes functions for all ships that cannot fly
 
+#include <UnitAI.h>
 #include "Physics.h"
 #include "Renderable.h"
-#include "AI.h"
-
 #include "Entity381.h"
 #include "GfxMgr.h"
 
@@ -90,7 +89,7 @@ void Alien::InitAspects() {
 	aspects.reserve(2);
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -111,7 +110,7 @@ void Carrier::InitAspects() {
 	aspects.reserve(2);
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -132,7 +131,7 @@ void Destroyer::InitAspects() {
 	aspects.reserve(2);
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -153,7 +152,7 @@ void Frigate::InitAspects() {
 	aspects.reserve(2);
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 }
 
 //-----------------------------------------------------------------------------------------------------------
@@ -174,7 +173,7 @@ void Speedboat::InitAspects() {
 	aspects.reserve(2);
 	aspects.push_back(new Physics(this));
 	aspects.push_back(new Renderable(this));
-	aspects.push_back(new AI(this));
+	aspects.push_back(new UnitAI(this));
 }
 
 //-----------------------------------------------------------------------------------------------------------

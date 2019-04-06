@@ -5,30 +5,30 @@
  *      Author: kylebrain
  */
 
-#include "AI.h"
+#include <UnitAI.h>
 #include "Entity381.h"
 #include "OgreMath.h"
 
-AI::AI(Entity381 * _entity) :
+UnitAI::UnitAI(Entity381 * _entity) :
 		Aspect(_entity) {
 }
-AI::~AI() {
+UnitAI::~UnitAI() {
 
 }
 
-void AI::Tick(float dt) {
+void UnitAI::Tick(float dt) {
 	if (entity->followEnt != NULL) {
 		Follow(entity->followEnt);
 	}
 }
 
-void AI::MoveTo(Ogre::Vector3 position) {
+void UnitAI::MoveTo(Ogre::Vector3 position) {
 	Ogre::Vector3 distanceVector =  position - entity->position;
 	entity->desiredHeading = Ogre::Math::ATan2(distanceVector.z, distanceVector.x).valueDegrees();
 	entity->desiredSpeed = entity->maxSpeed;
 }
 
-void AI::Follow(Entity381 * followEnt) {
+void UnitAI::Follow(Entity381 * followEnt) {
 	MoveTo(followEnt->position);
 }
 
