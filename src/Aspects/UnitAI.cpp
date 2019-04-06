@@ -17,6 +17,13 @@ UnitAI::~UnitAI() {
 }
 
 void UnitAI::Tick(float dt) {
+	if(!commands.empty()){
+		temp->tick(dt);
+		if(temp->done()){
+			commands.pop_front();
+		}
+	}
+
 	/*
 	if (entity->followEnt != NULL) {
 		Follow(entity->followEnt);
@@ -36,4 +43,15 @@ void UnitAI::Follow(Entity381 * followEnt) {
 	MoveTo(followEnt->position);
 }
 */
+
+void UnitAI::SetCommand(Command *c){
+	if(!commands.empty()){
+		commands.clear();
+		commands.push_back(c);
+	}
+}
+
+void UnitAI::AddCommand(Command *c){
+		commands.push_back(c);
+}
 
