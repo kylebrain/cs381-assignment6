@@ -59,12 +59,12 @@ void InputMgr::Tick(float dt) {
 	if (mKeyboard->isKeyDown(OIS::KC_Z)) {
 		engine->gfxMgr->cameraNode->pitch(
 				Ogre::Radian(-engine->gameMgr->cameraYawSpeed),
-				Ogre::Node::TransformSpace::TS_WORLD);
+				Ogre::Node::TransformSpace::TS_LOCAL);
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_X)) {
 		engine->gfxMgr->cameraNode->pitch(
 				Ogre::Radian(engine->gameMgr->cameraYawSpeed),
-				Ogre::Node::TransformSpace::TS_WORLD);
+				Ogre::Node::TransformSpace::TS_LOCAL);
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_Q)) {
 		engine->gfxMgr->cameraNode->yaw(

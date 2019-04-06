@@ -56,3 +56,7 @@ local.properties
 
 # Ignoring Debug Files
 Debug
+
+# Ignore Ogre config/log
+ogre.cfg
+Ogre.log
