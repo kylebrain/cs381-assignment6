@@ -27,8 +27,7 @@ Entity381::Entity381() :
 	position(Ogre::Vector3::ZERO),
 	velocity(Ogre::Vector3::ZERO),
 	ogreSceneNode(NULL),
-	ogreEntity(NULL),
-	followEnt(0)
+	ogreEntity(NULL)
 {}
 
 Entity381::Entity381(Engine * engine, string meshName,
@@ -45,8 +44,7 @@ Entity381::Entity381(Engine * engine, string meshName,
 		acceleration(_acceleration),
 		turningRate(_turningRate),
 		position(pos),
-		velocity(Ogre::Vector3::ZERO),
-		followEnt(0)
+		velocity(Ogre::Vector3::ZERO)
 {
 	ogreEntity = engine->gfxMgr->mSceneMgr->createEntity(meshName);
 	meshFile = meshName;

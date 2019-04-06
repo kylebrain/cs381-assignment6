@@ -18,9 +18,9 @@ public:
 	~UnitAI();
 
 	void Tick(float dt) override;
-private:
-	void MoveTo(Ogre::Vector3 position);
-	void Follow(Entity381 * followEnt);
+//private:
+	//void MoveTo(Ogre::Vector3 position);
+	//void Follow(Entity381 * followEnt);
 };
 
 
