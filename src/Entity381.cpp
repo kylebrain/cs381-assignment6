@@ -4,6 +4,11 @@
  *  Created on: Feb 24, 2019
  *      Author: kylebrain
  */
+//now includes functions for all ships that cannot fly
+
+#include "Physics.h"
+#include "Renderable.h"
+#include "AI.h"
 
 #include "Entity381.h"
 #include "GfxMgr.h"
@@ -67,3 +72,109 @@ void Entity381::Tick(float dt) {
 
 void Entity381::InitAspects() {}
 
+//-----------------------------------------------------------------------------------------------------------
+
+Alien::Alien() :
+		Entity381() {
+	InitAspects();
+}
+Alien::Alien(Engine * engine, Ogre::Vector3 pos, float heading,
+		int id) :
+		Entity381(engine, "alienship.mesh", pos, heading, 0, 200, 100, 50, id) {
+	InitAspects();
+}
+Alien::~Alien() {
+}
+
+void Alien::InitAspects() {
+	aspects.reserve(2);
+	aspects.push_back(new Physics(this));
+	aspects.push_back(new Renderable(this));
+	aspects.push_back(new AI(this));
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+Carrier::Carrier() :
+		Entity381() {
+	InitAspects();
+}
+Carrier::Carrier(Engine * engine, Ogre::Vector3 pos, float heading,
+		int id) :
+		Entity381(engine, "cvn68.mesh", pos, heading, 0, 100, 8, 5, id) {
+	InitAspects();
+}
+Carrier::~Carrier() {
+}
+
+void Carrier::InitAspects() {
+	aspects.reserve(2);
+	aspects.push_back(new Physics(this));
+	aspects.push_back(new Renderable(this));
+	aspects.push_back(new AI(this));
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+Destroyer::Destroyer() :
+		Entity381() {
+	InitAspects();
+}
+Destroyer::Destroyer(Engine * engine, Ogre::Vector3 pos, float heading,
+		int id) :
+		Entity381(engine, "ddg51.mesh", pos, heading, 0, 80, 8, 5, id) {
+	InitAspects();
+}
+Destroyer::~Destroyer() {
+}
+
+void Destroyer::InitAspects() {
+	aspects.reserve(2);
+	aspects.push_back(new Physics(this));
+	aspects.push_back(new Renderable(this));
+	aspects.push_back(new AI(this));
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+Frigate::Frigate() :
+		Entity381() {
+	InitAspects();
+}
+Frigate::Frigate(Engine * engine, Ogre::Vector3 pos, float heading,
+		int id) :
+		Entity381(engine, "sleek.mesh", pos, heading, 0, 60, 15, 10, id) {
+	InitAspects();
+}
+Frigate::~Frigate() {
+}
+
+void Frigate::InitAspects() {
+	aspects.reserve(2);
+	aspects.push_back(new Physics(this));
+	aspects.push_back(new Renderable(this));
+	aspects.push_back(new AI(this));
+}
+
+//-----------------------------------------------------------------------------------------------------------
+
+Speedboat::Speedboat() :
+		Entity381() {
+	InitAspects();
+}
+Speedboat::Speedboat(Engine * engine, Ogre::Vector3 pos, float heading,
+		int id) :
+		Entity381(engine, "cigarette.mesh", pos, heading, 0, 50, 20, 50, id) {
+	InitAspects();
+}
+Speedboat::~Speedboat() {
+}
+
+void Speedboat::InitAspects() {
+	aspects.reserve(2);
+	aspects.push_back(new Physics(this));
+	aspects.push_back(new Renderable(this));
+	aspects.push_back(new AI(this));
+}
+
+//-----------------------------------------------------------------------------------------------------------

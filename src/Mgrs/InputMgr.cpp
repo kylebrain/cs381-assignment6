@@ -30,7 +30,7 @@ void InputMgr::Tick(float dt) {
 
 	Ogre::Vector3 cameraMovement = Ogre::Vector3::ZERO;
 
-	if (mKeyboard->isKeyDown(OIS::KC_E)) {
+	if (mKeyboard->isKeyDown(OIS::KC_R)) {
 		cameraMovement += Ogre::Vector3::UNIT_Y * engine->gameMgr->cameraSpeed
 				* dt;
 	}
@@ -40,47 +40,41 @@ void InputMgr::Tick(float dt) {
 	}
 
 	if (mKeyboard->isKeyDown(OIS::KC_W)) {
-		if (mKeyboard->isKeyDown(OIS::KC_LSHIFT)) {
-			engine->gfxMgr->cameraNode->pitch(
-					Ogre::Radian(-engine->gameMgr->cameraYawSpeed),
-					Ogre::Node::TransformSpace::TS_LOCAL);
-		} else {
 			cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_Z
 					* engine->gameMgr->cameraSpeed * dt;
 		}
-	}
 	if (mKeyboard->isKeyDown(OIS::KC_S)) {
-		if (mKeyboard->isKeyDown(OIS::KC_LSHIFT)) {
-			engine->gfxMgr->cameraNode->pitch(
-					Ogre::Radian(engine->gameMgr->cameraYawSpeed),
-					Ogre::Node::TransformSpace::TS_LOCAL);
-		} else {
 			cameraMovement += Ogre::Vector3::UNIT_Z
 					* engine->gameMgr->cameraSpeed * dt;
-		}
 	}
-
 	if (mKeyboard->isKeyDown(OIS::KC_A)) {
-		if (mKeyboard->isKeyDown(OIS::KC_LSHIFT)) {
-			engine->gfxMgr->cameraNode->yaw(
-					Ogre::Radian(engine->gameMgr->cameraYawSpeed),
-					Ogre::Node::TransformSpace::TS_WORLD);
-		} else {
 			cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_X
 					* engine->gameMgr->cameraSpeed * dt;
 		}
-
-	}
 	if (mKeyboard->isKeyDown(OIS::KC_D)) {
-		if (mKeyboard->isKeyDown(OIS::KC_LSHIFT)) {
-			engine->gfxMgr->cameraNode->yaw(
-					Ogre::Radian(-engine->gameMgr->cameraYawSpeed),
-					Ogre::Node::TransformSpace::TS_WORLD);
-		} else {
 			cameraMovement += Ogre::Vector3::UNIT_X
 					* engine->gameMgr->cameraSpeed * dt;
-		}
+	}
 
+	if (mKeyboard->isKeyDown(OIS::KC_Z)) {
+		engine->gfxMgr->cameraNode->pitch(
+				Ogre::Radian(-engine->gameMgr->cameraYawSpeed),
+				Ogre::Node::TransformSpace::TS_WORLD);
+	}
+	if (mKeyboard->isKeyDown(OIS::KC_X)) {
+		engine->gfxMgr->cameraNode->pitch(
+				Ogre::Radian(engine->gameMgr->cameraYawSpeed),
+				Ogre::Node::TransformSpace::TS_WORLD);
+	}
+	if (mKeyboard->isKeyDown(OIS::KC_Q)) {
+		engine->gfxMgr->cameraNode->yaw(
+				Ogre::Radian(-engine->gameMgr->cameraYawSpeed),
+				Ogre::Node::TransformSpace::TS_WORLD);
+	}
+	if (mKeyboard->isKeyDown(OIS::KC_E)) {
+		engine->gfxMgr->cameraNode->yaw(
+				Ogre::Radian(engine->gameMgr->cameraYawSpeed),
+				Ogre::Node::TransformSpace::TS_WORLD);
 	}
 
 	engine->gfxMgr->cameraNode->translate(cameraMovement,

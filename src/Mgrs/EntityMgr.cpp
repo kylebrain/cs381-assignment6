@@ -6,13 +6,7 @@
  */
 
 #include "EntityMgr.h"
-#include "Destroyer.h"
-#include "Carrier.h"
-#include "Speedboat.h"
-#include "Frigate.h"
-#include "Alien.h"
 #include "Entity3D.h"
-#include "Banshee.h"
 #include <exception>
 
 EntityMgr::EntityMgr(Engine * engine) :

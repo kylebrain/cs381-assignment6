@@ -4,6 +4,7 @@
  *  Created on: Feb 24, 2019
  *      Author: kylebrain
  */
+//now includes all ship classes that cannot fly
 
 #ifndef INC_ENTITY381_H_
 #define INC_ENTITY381_H_
@@ -66,6 +67,61 @@ public:
 	void Tick(float dt);
 	virtual void InitAspects();
 
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+class Alien : public Entity381 {
+public:
+	Alien();
+	Alien(Engine * engine, Ogre::Vector3 pos, float heading, int id);
+	virtual ~Alien();
+
+	virtual void InitAspects();
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+class Carrier : public Entity381 {
+public:
+	Carrier();
+	Carrier(Engine * engine, Ogre::Vector3 pos, float heading, int id);
+	virtual ~Carrier();
+
+	virtual void InitAspects();
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+class Destroyer : public Entity381 {
+public:
+	Destroyer();
+	Destroyer(Engine * engine, Ogre::Vector3 pos, float heading, int id);
+	virtual ~Destroyer();
+
+	virtual void InitAspects();
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+class Frigate : public Entity381 {
+public:
+	Frigate();
+	Frigate(Engine * engine, Ogre::Vector3 pos, float heading, int id);
+	virtual ~Frigate();
+
+	virtual void InitAspects();
+};
+
+//-----------------------------------------------------------------------------------------------------------
+
+class Speedboat : public Entity381 {
+public:
+	Speedboat();
+	Speedboat(Engine * engine, Ogre::Vector3 pos, float heading, int id);
+	virtual ~Speedboat();
+
+	virtual void InitAspects();
 };
 
 #endif /* INC_ENTITY381_H_ */
