@@ -19,7 +19,7 @@
 #include "UnitAI.h"
 
 InputMgr::InputMgr(Engine * engine) :
-		Mgr(engine), mInputMgr(0), mMouse(0), mKeyboard(0) {
+		Mgr(engine), mInputMgr(0), mMouse(0), mKeyboard(0), shiftPressed(false) {
 }
 
 void InputMgr::Tick(float dt) {
@@ -127,6 +127,9 @@ bool InputMgr::keyPressed(const OIS::KeyEvent &arg) {
 		newHeading = engine->entityMgr->GetSelectedDesiredHeading();
 		newAltitude = engine->entityMgr->GetSelectedDesiredAltitude();
 		break;
+	case OIS::KC_LSHIFT:
+		shiftPressed = true;
+		break;
 	default:
 		// not implemented!
 		break;
@@ -141,6 +144,15 @@ bool InputMgr::keyPressed(const OIS::KeyEvent &arg) {
 }
 
 bool InputMgr::keyReleased(const OIS::KeyEvent &arg) {
+
+	switch(arg.key) {
+	case OIS::KC_LSHIFT:
+		shiftPressed = false;
+		break;
+	default:
+		break;
+	}
+
 	return true;
 }
 
@@ -168,15 +180,22 @@ bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 			Ogre::Vector3 clickedPos = GetClickPosition(arg);
 			int index = GetClickedEntityIndex(clickedPos);
 			Entity381 * clickedEntity = engine->entityMgr->entities[index];
+			Command * newCommand;
 			if(clickedEntity->position.distance(clickedPos) <= engine->gameMgr->entityClickThreshold) {
 				// clicked on an entity
-				std::cout << "Clicked on entity!" << std::endl;
-				engine->entityMgr->selectedEntity->ai->SetCommand(new Intercept(engine->entityMgr->selectedEntity, clickedEntity));
+				newCommand = new Intercept(engine->entityMgr->selectedEntity, clickedEntity);
 			} else {
 				// clicked on the water
-				std::cout << "Clicked on water!" << std::endl;
-				engine->entityMgr->selectedEntity->ai->SetCommand(new MoveTo(engine->entityMgr->selectedEntity, clickedPos));
+				newCommand = new MoveTo(engine->entityMgr->selectedEntity, clickedPos);
+
 			}
+
+			if(shiftPressed) {
+				engine->entityMgr->selectedEntity->ai->AddCommand(newCommand);
+			} else {
+				engine->entityMgr->selectedEntity->ai->SetCommand(newCommand);
+			}
+
 		} catch (const std::exception & e) {
 		}
 

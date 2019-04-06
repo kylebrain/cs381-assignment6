@@ -45,6 +45,7 @@ protected:
 private:
 	int GetClickedEntityIndex(Ogre::Vector3 clickedPos);
 	Ogre::Vector3 GetClickPosition(const OIS::MouseEvent &arg);
+	bool shiftPressed;
 };
 
 #endif /* INC_INPUTMGR_H_ */
