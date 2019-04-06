@@ -12,7 +12,7 @@
 #include "EntityMgr.h"
 
 GameMgr::GameMgr(Engine * engine) : Mgr(engine), surfaceHeight(0), headingIncreasePerPress(15), speedIncreasePerPress(
-		50), cameraSpeed(100), cameraYawSpeed(0.01f), altitudeIncreasePerPress(50) {}
+		50), cameraSpeed(100), cameraYawSpeed(0.01f), altitudeIncreasePerPress(50), entityClickThreshold(100) {}
 
 void GameMgr::Tick(float dt) {
 }

@@ -19,6 +19,8 @@
 #include "Aspect.h"
 #include "Engine.h"
 
+class UnitAI;
+
 using namespace std;
 
 class EntityMgr;
@@ -59,6 +61,7 @@ public:
 	Ogre::SceneNode * ogreSceneNode;
 	Ogre::Entity * ogreEntity;
 
+	UnitAI * ai;
 	vector<Aspect *> aspects;
 
 	void Tick(float dt);

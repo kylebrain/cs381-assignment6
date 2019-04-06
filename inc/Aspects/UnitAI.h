@@ -18,12 +18,11 @@ public:
 	UnitAI(Entity381 * _entity);
 	~UnitAI();
 
-	void SetCommand(Command *c);
-	void AddCommand(Command *c);
-
 	Command *temp;
 
 	std::list<Command*> commands;
+	void SetCommand(Command * c);
+	void AddCommand(Command * c);
 
 	void Tick(float dt) override;
 //private:

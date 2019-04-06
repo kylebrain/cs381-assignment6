@@ -26,6 +26,9 @@ public:
 	Entity381* entity;
 	COMMAND_TYPE commandType;
 
+protected:
+	void Goto(Ogre::Vector3 pos);
+
 };
 
 class MoveTo: public Command {

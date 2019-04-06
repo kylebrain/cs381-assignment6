@@ -8,12 +8,15 @@
 #include "InputMgr.h"
 #include <OgreVector3.h>
 #include <OgreRenderWindow.h>
+#include <exception>
 //#include <CEGUI/CEGUI.h>
 
 #include "Engine.h"
 #include "GfxMgr.h"
 #include "EntityMgr.h"
 #include "GameMgr.h"
+#include "Command.h"
+#include "UnitAI.h"
 
 InputMgr::InputMgr(Engine * engine) :
 		Mgr(engine), mInputMgr(0), mMouse(0), mKeyboard(0) {
@@ -24,8 +27,8 @@ void InputMgr::Tick(float dt) {
 	mKeyboard->capture();
 	mMouse->capture();
 
-	engine->gameMgr->cameraSpeed=100;
-	engine->gameMgr->cameraYawSpeed=.01f;
+	engine->gameMgr->cameraSpeed = 100;
+	engine->gameMgr->cameraYawSpeed = .01f;
 
 	if (mKeyboard->isKeyDown(OIS::KC_ESCAPE)) {
 		engine->keepRunning = false;
@@ -37,15 +40,15 @@ void InputMgr::Tick(float dt) {
 	Ogre::Vector3 cameraMovement = Ogre::Vector3::ZERO;
 
 	if (mKeyboard->isKeyDown(OIS::KC_LSHIFT)) {
-		engine->gameMgr->cameraSpeed=250;
-		engine->gameMgr->cameraYawSpeed=.025f;
+		engine->gameMgr->cameraSpeed = 250;
+		engine->gameMgr->cameraYawSpeed = .025f;
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_R)) {
 		cameraMovement += Ogre::Vector3::UNIT_Y * engine->gameMgr->cameraSpeed
 				* dt;
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_F)) {
-		if(engine->gfxMgr->cameraNode->getPosition().y<=10){
+		if (engine->gfxMgr->cameraNode->getPosition().y <= 10) {
 			return;
 		}
 		cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_Y
@@ -53,20 +56,20 @@ void InputMgr::Tick(float dt) {
 	}
 
 	if (mKeyboard->isKeyDown(OIS::KC_W)) {
-			cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_Z
-					* engine->gameMgr->cameraSpeed * dt;
-		}
+		cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_Z
+				* engine->gameMgr->cameraSpeed * dt;
+	}
 	if (mKeyboard->isKeyDown(OIS::KC_S)) {
-			cameraMovement += Ogre::Vector3::UNIT_Z
-					* engine->gameMgr->cameraSpeed * dt;
+		cameraMovement += Ogre::Vector3::UNIT_Z * engine->gameMgr->cameraSpeed
+				* dt;
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_A)) {
-			cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_X
-					* engine->gameMgr->cameraSpeed * dt;
-		}
+		cameraMovement += Ogre::Vector3::NEGATIVE_UNIT_X
+				* engine->gameMgr->cameraSpeed * dt;
+	}
 	if (mKeyboard->isKeyDown(OIS::KC_D)) {
-			cameraMovement += Ogre::Vector3::UNIT_X
-					* engine->gameMgr->cameraSpeed * dt;
+		cameraMovement += Ogre::Vector3::UNIT_X * engine->gameMgr->cameraSpeed
+				* dt;
 	}
 	if (mKeyboard->isKeyDown(OIS::KC_Z)) {
 		engine->gfxMgr->cameraNode->pitch(
@@ -151,28 +154,42 @@ bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 	int entIndex;
 	switch (id) {
 	case OIS::MB_Left:
-		entIndex = GetClickedEntityIndex(arg);
-		if (entIndex >= 0) {
-			engine->entityMgr->SelectEntity(entIndex);
-		}
-		break;
 
-	case OIS::MB_Right:
-		entIndex = GetClickedEntityIndex(arg);
-		if (entIndex >= 0) {
-			// set the selected entity to follow the right clicked entity
-				// add a command
-			//engine->entityMgr->selectedEntity->followEnt = engine->entityMgr->entities[entIndex];
+		try {
+			Ogre::Vector3 clickedPos = GetClickPosition(arg);
+			engine->entityMgr->SelectEntity(GetClickedEntityIndex(clickedPos));
+		} catch (const std::exception & e) {
 		}
-		break;
 
+		break;
+	case OIS::MB_Right: {
+
+		try {
+			Ogre::Vector3 clickedPos = GetClickPosition(arg);
+			int index = GetClickedEntityIndex(clickedPos);
+			Entity381 * clickedEntity = engine->entityMgr->entities[index];
+			if(clickedEntity->position.distance(clickedPos) <= engine->gameMgr->entityClickThreshold) {
+				// clicked on an entity
+				std::cout << "Clicked on entity!" << std::endl;
+				engine->entityMgr->selectedEntity->ai->SetCommand(new Intercept(engine->entityMgr->selectedEntity, clickedEntity));
+			} else {
+				// clicked on the water
+				std::cout << "Clicked on water!" << std::endl;
+				engine->entityMgr->selectedEntity->ai->SetCommand(new MoveTo(engine->entityMgr->selectedEntity, clickedPos));
+			}
+		} catch (const std::exception & e) {
+		}
+
+		break;
+	}
 	default:
 		break;
 	}
 
 	return true;
 }
-int InputMgr::GetClickedEntityIndex(const OIS::MouseEvent &arg) {
+
+Ogre::Vector3 InputMgr::GetClickPosition(const OIS::MouseEvent &arg) {
 	Ogre::Ray mouseRay = engine->gfxMgr->mCamera->getCameraToViewportRay(
 			arg.state.X.abs / Ogre::Real(engine->gfxMgr->vp->getActualWidth()),
 			arg.state.Y.abs
@@ -181,12 +198,14 @@ int InputMgr::GetClickedEntityIndex(const OIS::MouseEvent &arg) {
 	std::pair<bool, float> result = mouseRay.intersects(
 			engine->gameMgr->groundPlane);
 	if (result.first) {
-		return engine->entityMgr->GetClosestEntityIndex(
-				mouseRay.getPoint(result.second));
+		return mouseRay.getPoint(result.second);
 	} else {
-		return -1;
+		throw logic_error("Did not intercept with plane!");
 	}
+}
 
+int InputMgr::GetClickedEntityIndex(Ogre::Vector3 clickedPos) {
+	return engine->entityMgr->GetClosestEntityIndex(clickedPos);
 }
 
 bool InputMgr::mouseReleased(const OIS::MouseEvent &arg,

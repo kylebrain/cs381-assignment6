@@ -43,7 +43,8 @@ protected:
 			OIS::MouseButtonID id);
 
 private:
-	int GetClickedEntityIndex(const OIS::MouseEvent &arg);
+	int GetClickedEntityIndex(Ogre::Vector3 clickedPos);
+	Ogre::Vector3 GetClickPosition(const OIS::MouseEvent &arg);
 };
 
 #endif /* INC_INPUTMGR_H_ */
