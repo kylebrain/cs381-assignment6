@@ -40,7 +40,7 @@ bool MoveTo::done() {
 // Intercept
 Intercept::Intercept(Entity381* ent, Entity381* target) :
 		Command(ent, COMMAND_TYPE::INTERCEPT), targetEntity(target), MOVE_DISTANCE_THRESHOLD(
-				20) {
+				50) {
 }
 Intercept::~Intercept() {
 }

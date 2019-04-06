@@ -161,6 +161,8 @@ bool InputMgr::mouseMoved(const OIS::MouseEvent &arg) {
 	return true;
 }
 
+#include <iostream>
+
 bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 
 	int entIndex;
@@ -183,9 +185,11 @@ bool InputMgr::mousePressed(const OIS::MouseEvent &arg, OIS::MouseButtonID id) {
 			Command * newCommand;
 			if(clickedEntity->position.distance(clickedPos) <= engine->gameMgr->entityClickThreshold) {
 				// clicked on an entity
+				std::cout << "Following entity!" << std::endl;
 				newCommand = new Intercept(engine->entityMgr->selectedEntity, clickedEntity);
 			} else {
 				// clicked on the water
+				std::cout << "Going to position!" << std::endl;
 				newCommand = new MoveTo(engine->entityMgr->selectedEntity, clickedPos);
 
 			}
